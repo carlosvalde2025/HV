@@ -366,11 +366,3 @@ footer {
     height: auto;
     
 }
-.foto-perfil {
-  width: 150px;
-  height: auto;
-  border-radius: 8px;
-  border: 4px solid #080808;
-  display: inline-block;
-  margin: 0;
-}
