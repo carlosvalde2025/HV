@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida carlos Valderrama </title>
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="/img/carlos.jpg" alt="foto" class="foto-perfil">
+        <h1>Hoja de Vida de Carlos Valderrama</h1>
+        <h2>Ingeniero de Sistemas Especialista</h2>
+        <p>Ingeniero de Sistemas | Especialista en Arquitectura de Software y Transformación Digital</p>
+        <hr/>
+
+        <h2>Acerca de mí</h2>
+        <p class="p-justificado" >Profesional con sólida trayectoria en el análisis, diseño e implementación de soluciones de software
+        empresariales. Experto en frameworks ágiles, prácticas DevOps y despliegues en la nube,
+        enfocado en crear productos escalables y seguros que aporten valor al negocio y a sus
+        usuarios.</p>
+
+    </header>
+
+    <nav>
+        <div class="opciones">
+            <a href="#Perfil">Formación</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#formulario">Formulario</a>
+        </div>
+    </nav>    
+<section id="Perfil">
+    <h2>Perfil Profesional</h2>
+    <p class="p-justificado">Ingeniero de Sistemas con experiencia en el sector salud, especializado en el desarrollo e implementación de soluciones tecnológicas para la gestión clínica y administrativa. Ha participado en proyectos de transformación digital en hospitales y E.S.E., optimizando procesos mediante sistemas de información, interoperabilidad HL7 y herramientas de análisis de datos orientadas a mejorar la calidad en la atención al paciente.</p>
+</section> 
+    <section id="formacion">  
+        <h3> Historial educativo</h3>
+        <table border="1" cellpadding="10" cellspacing="0">
+    </section>
+        <section>
+            
+                <th> Año </th>
+                <th> Estudio </th>
+                <th> Institución </th>
+            <tr>
+                <td> 2015</td>
+                <td> Ingeniero en sistemas</td>
+                <td> Universidad</td>
+            </tr>
+            <tr>
+                <td> 2024 </td>
+                <td> Especialista en Arquitectura de Software</td>
+                <td> Universidad del Valle</td>
+
+            <tr> 
+                <td> 1994 </td>
+                <td> Bachiller </td>
+                <td> Educacion Bachiller</td>
+            </tr> 
+            
+        </table>
+    </section>  
+
+    <section id="experiencia"> 
+    <h2>Experiencia Laboral</h2>
+</section>
+
+    <section class="texto-derecha">
+    <p><b>Coordinador de Innovación y Desarrollo</b></p>
+    <b>Hospital Universitario del Valle Evaristo García – Área de Gestión de la Información | 2020 - Actualidad</b>
+    <p>
+        Funciones:
+        <ol>
+            <li>Coordinación de la Oficina de Innovación y Desarrollo Tecnológico.</li>
+            <li>Diseño e implementación de soluciones informáticas para procesos clínicos y administrativos.</li>
+            <li>Gestión de sistemas de información hospitalaria (HIS), interoperabilidad y gobierno de datos.</li>
+            <li>Liderazgo de proyectos de transformación digital en el sector salud.</li>
+            <li>Capacitación a personal asistencial y administrativo en herramientas TIC.</li>
+        </ol><br>
+    </p>
+    <img src="img/huv.jpeg" alt="foto"><br>
+
+    <p><b>Docente de Tecnología e Informática</b></p>
+    <b>Institutos de Educación Técnica y Tecnológica | 2017 - 2020</b>
+    <p style="text-align: justify;">
+        Funciones:
+        <ol>
+            <li>Docencia en áreas de programación, bases de datos, análisis de sistemas y herramientas ofimáticas.</li>
+            <li>Diseño de contenidos académicos y material didáctico adaptado a competencias laborales.</li>
+            <li>Acompañamiento en proyectos de grado y prácticas empresariales.</li>
+            <li>Evaluación de competencias TIC y seguimiento al rendimiento estudiantil.</li>
+        </ol><br>
+    </p>
+    <img src="img/inti.jpg" alt="foto"><br>
+    </section>
+
+<section id="habilidades">
+<h2> Habilidades </h2>
+        <p style="text-align: justify;"> 
+            <ul>
+                <li>Atención al paciente</li>
+                <li>Trabajo en equipo</li>
+                <li>Comunicación asertiva</li>
+                <li>Capacidad de adaptación</li>
+                <li>Resolución de problemas</li>
+                <li>Trabajo bajo presión</li>
+                <li>excelente actitud de servicio</li>
+            </ul>
+        </p>
+        </section>
+        <section id="formulario">
+    <h2>Formulario de Contacto</h2>
+    <p>¿Te gustaría trabajar conmigo o tienes una propuesta interesante? Rellena este formulario y me pondré en contacto contigo lo antes posible.</p>
+
+    <form>
+        <!-- Información Personal -->
+        <fieldset>
+            <legend><strong>Información Personal</strong></legend>
+
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50" placeholder="Ej. Laura Gómez">
+            <br><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="Ej. correo@ejemplo.com">
+            <br><br>
+
+            <label for="telefono">Teléfono (10 dígitos):</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" maxlength="10" placeholder="Ej. 3001234567">
+            <br><br>
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" maxlength="50">
+        </fieldset>
+
+        <!-- Información Profesional -->
+        <fieldset>
+            <legend><strong>Información Profesional</strong></legend>
+
+            <label for="empresa">Empresa o institución:</label>
+            <input type="text" id="empresa" name="empresa" maxlength="100">
+            <br><br>
+
+            <label for="cargo">Cargo actual:</label>
+            <input type="text" id="cargo" name="cargo" maxlength="50">
+            <br><br>
+
+            <label for="experiencia">Años de experiencia:</label>
+            <input type="number" id="experiencia" name="experiencia" min="0" max="50">
+        </fieldset>
+
+        <!-- Detalles del Proyecto -->
+        <fieldset>
+            <legend><strong>Detalles del Proyecto</strong></legend>
+
+            <label for="tipo-proyecto">Tipo de proyecto o colaboración:</label>
+            <select id="tipo-proyecto" name="tipo-proyecto" required>
+                <option value="">Seleccione una opción</option>
+                <option value="desarrollo">Desarrollo de software</option>
+                <option value="docencia">Docencia / Capacitación</option>
+                <option value="consultoria">Consultoría</option>
+                <option value="investigacion">Proyecto de investigación</option>
+                <option value="otro">Otro</option>
+            </select>
+            <br><br>
+
+            <label for="mensaje">Descripción detallada del proyecto:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="6" cols="50" required minlength="10" maxlength="500" placeholder="Cuéntame en qué consiste tu idea o proyecto..."></textarea>
+        </fieldset>
+
+        <!-- Preferencias de contacto -->
+        <fieldset>
+            <legend><strong>Preferencias de Contacto</strong></legend>
+
+            <label for="horario-contacto">Horario preferido para ser contactado:</label>
+            <input type="time" id="horario-contacto" name="horario-contacto">
+            <br><br>
+
+            <label for="medio-contacto">¿Cómo prefieres que te contacte?</label>
+            <select id="medio-contacto" name="medio-contacto">
+                <option value="email">Correo electrónico</option>
+                <option value="telefono">Teléfono</option>
+                <option value="whatsapp">WhatsApp</option>
+            </select>
+        </fieldset>
+
+        <!-- Botones -->
+        <div style="margin-top: 20px;">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </div>
+    </form>
+</section>
+
+    <footer>
+        <p>&copy; 2023 Hoja de Vida Carlos Valderrama</p>
+    </footer>
+    
+</body>
+</html>
