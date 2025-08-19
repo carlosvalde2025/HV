@@ -6,13 +6,14 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #2c3e50;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     padding: 20px;
     text-align: center;
+    min-height: 100vh;
 }
 
 .main-content {
@@ -23,29 +24,43 @@ body {
 
 header {
     margin-bottom: 40px;
-    background-color: #fff;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08), 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
 }
 
 header img,
 .foto-perfil {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #3498db;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border: 5px solid #3498db;
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2), 0 4px 10px rgba(0,0,0,0.1);
     margin: 24px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header img:hover,
+.foto-perfil:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(52, 152, 219, 0.3), 0 6px 15px rgba(0,0,0,0.15);
 }
 
 header h1 {
-    color: #3896f3;
-    font-size: 2.2em;
-    margin-top: 10px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.4em;
+    margin-top: 15px;
     margin-bottom: 24px;
-    font-weight: bold;  
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(52, 152, 219, 0.1);
 }
 
 header h2 {
@@ -70,7 +85,51 @@ header p {
     margin-top: 10px;
     margin-bottom: 16px;
     color: #2c3e50;
-    
+}
+
+/* Estilos para enlaces de redes sociales */
+.redes-sociales {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.redes-sociales a {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3), 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.redes-sociales a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.redes-sociales a:hover::before {
+    left: 100%;
+}
+
+.redes-sociales a:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #1f5f8b 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4), 0 4px 15px rgba(0,0,0,0.2);
+    border-color: rgba(255,255,255,0.3);
 }
 header .p-justificado {
     margin-top: 10px;
@@ -131,13 +190,26 @@ nav a:hover {
     color: #ffffff;
 }
 
+/* Estilo para enlace activo en navegación */
+nav a.activo {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
 section {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 10px;
-    margin: 30px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 30px;
+    border-radius: 18px;
+    margin: 35px 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08), 0 2px 10px rgba(0,0,0,0.04);
     scroll-margin-top: 84px;
+    border: 1px solid rgba(255,255,255,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12), 0 4px 15px rgba(0,0,0,0.06);
 }
 
 section h2 {
@@ -162,19 +234,56 @@ ul, ol {
     display: inline-block;
     margin-bottom: 24px;
     list-style: disc;
-    padding-left: 20px;
+    padding-left: 25px;
+    background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border-left: 4px solid #3498db;
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     color: #2c3e50;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-left: 8px;
+}
+
+li:hover {
+    color: #3498db;
+    transform: translateX(5px);
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: #3498db;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+li:hover::before {
+    opacity: 1;
 }
 
 table {
     margin: 0 auto;
     border-collapse: collapse;
-    width: 30%;
+    width: 90%;
+    max-width: 800px;
     text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12), 0 4px 15px rgba(0,0,0,0.06);
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid rgba(52, 152, 219, 0.1);
 }
 
 th, td {
@@ -184,13 +293,28 @@ th, td {
 }
 
 th {
-    background-color: #ecf0f1;
-    font-weight: 500;
-    color: #2c3e50;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    font-weight: 600;
+    color: #ffffff;
+    padding: 15px 12px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    letter-spacing: 0.5px;
 }
 
 td {
     color: #2c3e50;
+    padding: 10px 8px;
+}
+
+/* Estilos para filas alternadas en tablas */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background: linear-gradient(90deg, #e8f4fd 0%, #d6eaff 100%);
+    transition: all 0.3s ease;
+    transform: scale(1.01);
 }
 
 form {
@@ -203,11 +327,18 @@ form {
 }
 
 fieldset {
-    margin-bottom: 24px;
-    padding: 24px;
-    border: 1px solid #95a5a6;
-    border-radius: 4px;
-    background-color: #ecf0f1;
+    margin-bottom: 28px;
+    padding: 28px;
+    border: 2px solid #e9ecef;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02), 0 2px 8px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: #3498db;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02), 0 4px 15px rgba(52, 152, 219, 0.1);
 }
 
 legend {
@@ -225,17 +356,23 @@ label {
 
 input, select, textarea {
     width: 100%;
-    padding: 16px;
-    border: 1px solid #95a5a6;
-    border-radius: 4px;
+    padding: 18px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
     font-size: 16px;
     font-family: inherit;
     margin-bottom: 16px;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     outline: none;
-    border-color: #2c3e50;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1), inset 0 2px 4px rgba(0,0,0,0.02);
+    background: #ffffff;
+    transform: translateY(-1px);
 }
 
 textarea {
@@ -243,29 +380,129 @@ textarea {
 }
 
 button {
-    background-color: #2c3e50;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: #ffffff;
-    padding: 16px 24px;
-    border-radius: 4px;
+    padding: 18px 28px;
+    border-radius: 12px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     margin-right: 16px;
     margin-top: 16px;
     cursor: pointer;
     border: none;
-    transition: background-color 0.3s;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3), 0 2px 8px rgba(0,0,0,0.1);
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
 }
 
 button:hover {
-    background-color: #34495e;
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4), 0 4px 15px rgba(0,0,0,0.2);
 }
 
 button[type="reset"] {
-    background-color: #7f8c8d;
+    background: linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%);
+    box-shadow: 0 4px 15px rgba(127, 140, 141, 0.3), 0 2px 8px rgba(0,0,0,0.1);
 }
 
 button[type="reset"]:hover {
-    background-color: #95a5a6;
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    box-shadow: 0 8px 25px rgba(127, 140, 141, 0.4), 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Estilos para mensajes de validación */
+.error-mensaje {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mensaje-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos para campos con error */
+input.error, textarea.error, select.error {
+    border-color: #e74c3c !important;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+}
+
+/* Animaciones sutiles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Efecto de brillo sutil en hover para elementos interactivos */
+.redes-sociales a,
+button,
+nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de ondas en botones */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Mejora en la transición del scroll suave */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Footer */
@@ -307,8 +544,19 @@ footer {
         font-size: 18px;
     }
     table {
-        font-size: 14px;
+        font-size: 12px;
         width: 100%;
+    }
+
+    .redes-sociales {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes-sociales a {
+        width: 80%;
+        text-align: center;
+        margin: 5px 0;
     }
     th, td {
         padding: 8px;
